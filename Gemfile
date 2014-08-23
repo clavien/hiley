@@ -1,23 +1,35 @@
 source 'https://rubygems.org'
 
 
-gem 'simple_form'
-gem 'devise'
-gem 'rolify'
-gem 'cancan'
-gem 'carrierwave'
-gem 'cloudinary'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-group :production do
-  gem 'pg'
-end
 group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :development do
+  gem 'meta_request'
+end
+
+gem 'rails_admin'
+gem 'carrierwave'
+gem 'mini_magick', '3.5.0'
+gem 'devise'
+gem 'simple_form'
+gem 'friendly_id', '~> 5.0.0'
+gem 'heroku', '~> 3.8.4'
+gem "cancan"
+
+gem "twitter-bootstrap-rails"
+gem 'high_voltage', '~> 2.2.0'
+# gem 'fullcalendar-rails'
+gem 'icalendar', '~> 2.1.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
