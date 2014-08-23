@@ -1,0 +1,34 @@
+<h1>Hiley</h1>
+<p></p>
+<h1>h1</h1>
+<p></p>
+<div class="row">
+	<div class="col-md-6">
+		<h2>Profiles</h2>
+		# <%= link_to '/', new_expertise_path, class: 'btn btn-primary btn-sm' %>
+		<table class = 'table'>
+		 <tr>
+		 <th>Name</th>
+		 <th>Price</th>
+		 </tr>
+		 <% @profiles.each do |profile| %>
+		 <tr>
+
+		 <td><%= image_tag(profile.picture_url(:thumbnail), width: 50, height: 50) %><%= link_to profile.name, profile %></td>
+		 <td><%= profile.price %></td>
+		 <% end %>	
+		</tr>
+		</table> 
+	</div>
+	<div class="col-md-6">
+		<h2>Accounts</h2>
+
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+
+	</div>
+	
+</div>
+
